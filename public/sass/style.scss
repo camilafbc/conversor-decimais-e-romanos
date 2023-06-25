@@ -1,83 +1,154 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d2691e;
 }
 
-main{
-    height: 90%;
+main {
+  height: 90%;
+  width: 90%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5dc;
+  border-radius: 12px;
+}
+
+.container_text {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.container {
+  height: 100%;
+  width: 95%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #8080806e;
+  
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.container_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 250px;
+  height: 40px;
+  margin-bottom: 6px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #e18747e0;;
+  color: #f5f5f5;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.4s;
+    background-color: #d2691e;
+  }
+}
+
+.container_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55%;
+  justify-content: center;
+
+  label,
+  span {
+    width: 250px;
+    font-weight: 600;
+    color: #333333;
+  }
+}
+
+input[type="text"] {
+  width: 250px;
+  height: 40px;
+  margin-bottom: 6px;
+  padding: 0 5px;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #a9a9a9;
+
+  &:placeholder {
+    padding: 0 5px;
+    color: #333333;
+    opacity: 0.8;
+  }
+}
+
+.container_input_saida {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
+
+  div {
     width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    padding: 0 5px;
+    font-size: 16px;
+    font-weight: 400;
+  }
 
-.container{
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.container_text{
-    text-align: center;
-    text-transform: uppercase;
-    margin: 1.5rem 0;
-}
-
-h1{
-    font-size: 1.5rem;
-}
-
-.container_buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-button{
-    width: 250px;
-    height: 40px;
-    margin-bottom: 6px;
-    border: none;
-    background-color: rgb(0, 47, 255);
-    color: #f5f5f5;
+  i {
+    position: relative;
+    color: #333333;
     cursor: pointer;
-}
 
-.container_input{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50%;
-    justify-content: center;
-
-    label, span{
-        width: 250px;
+    &:hover {
+      opacity: 0.8;
     }
+
+    &:active {
+      bottom: 1px;
+    }
+  }
 }
 
-.container_input_saida{
-    width: 250px;
-    height: 40px;
-    margin-bottom: 6px;
-    border: 1px solid black;
-}
+input[type="button"] {
+  margin-top: 1rem;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #d2691e;
+  color: #d2691e;
+  cursor: pointer;
 
-// #toRomanosContainer{
-//     display: none;
-// }
-
-input[type="text"]{
-    width: 250px;
-    height: 40px;
-    margin-bottom: 6px;
+  &:hover {
+    background-color: #d2691e;
+    color: #f5f5f5;
+    transition: 0.4s;
+  }
 }
