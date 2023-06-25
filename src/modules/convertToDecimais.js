@@ -1,9 +1,8 @@
-const romanos = ["I", "V", "X", "L" , "C", "D", "M"]
-const values = [1, 5, 10, 50, 100, 500, 1000]
-
-const saida = document.getElementById("saida-decimal")
+import { saidaDecimal } from "./constants.js";
 
 function convertToDecimais(entrada){
+    const romanos = ["I", "V", "X", "L" , "C", "D", "M"];
+    const values = [1, 5, 10, 50, 100, 500, 1000];
     let value = 0
 
     for(let i = 0; i < entrada.length; i++){
@@ -15,7 +14,7 @@ function convertToDecimais(entrada){
         curr_value < next_value ? value -= curr_value : value += curr_value
     }
     
-    saida.innerText = value
+    saidaDecimal.innerText = value
 }
 
 async function copyDecimais(x){

@@ -10,10 +10,11 @@ const saidaDecimal = document.getElementById("saida-decimal");
 const btnToDecimal = document.getElementById("toDecimal");
 const btnToRomanos = document.getElementById("toRomanos");
 
-
-const btn = document.getElementById("btn-convert-to-decimal");
+const btnConvertToDecimal = document.getElementById("btn-convert-to-decimal");
+const btnConvertToRomanos = document.getElementById("btn-convert-to-romanos");
 
 const copyDec = document.querySelector(".copy-decimais");
 const copyRom = document.querySelector(".copy-romanos");
 
-export { btn, btnToDecimal, btnToRomanos, copyDec, copyRom, inputDecimais, inputRomanos, saidaDecimal, saidaRomanos, toDecimalContent, toRomanosContent } 
+
+export { btnConvertToDecimal, btnConvertToRomanos, btnToDecimal, btnToRomanos, copyDec, copyRom, inputDecimais, inputRomanos, saidaDecimal, saidaRomanos, toDecimalContent, toRomanosContent } 

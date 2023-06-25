@@ -1,56 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Números Romanos</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-count-roman-numbers-for-calendar-and-etc-flat-icons-inmotus-design-4.png"
+      type="image/x-icon"
+    />
     <!-- Style -->
-    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="stylesheet" href="public/style/style.css" />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <main>
+      <div class="container_text">
+        <img
+          width="67"
+          height="67"
+          src="https://img.icons8.com/external-flat-icons-inmotus-design/67/000000/external-medal-roman-numbers-for-calendar-and-etc-flat-icons-inmotus-design-2.png"
+          alt="external-medal-roman-numbers-for-calendar-and-etc-flat-icons-inmotus-design-2"
+        />
+        <h1>Conversor de Números Romanos</h1>
+      </div>
 
-        <div class="container_text">
-            <img width="96" height="96" src="https://img.icons8.com/color/96/coliseum.png" alt="coliseum"/>
-            <h1>Conversor de Números Romanos</h1>
+      <div class="container">
+        <div class="container_buttons">
+          <button id="toDecimal" class="click-button">
+            Converter para Decimal
+          </button>
+          <button id="toRomanos" class="click-button">
+            Converter para Romanos
+          </button>
         </div>
-
-        <div class="container">
-            <div class="container_buttons">
-                <button id="toDecimal">Converter para Decimal</button>
-                <button id="toRomanos">Converter para Romanos</button>
-            </div>
-            <div class="container_input" id="toDecimalContainer">
-                <label for="recebe-romanos">Romanos:</label>
-                <input type="text" name="recebe-romanos" id="recebe-romanos" placeholder="XXV">
-                <span>Decimais:</span>
-                <div class="container_input_saida">
-                    <div id="saida-decimal">
-                        
-                    </div>
-                    <i class="fa-regular fa-copy copy-decimais"></i>
-                </div>
-                <input type="button" id="btn-convert-to-decimal" value="Converter">
-            </div>
-            <div class="container_input" id="toRomanosContainer">
-                <label for="recebe-decimais">Decimais:</label>
-                <input type="text" name="recebe-decimais" id="recebe-decimais" placeholder="125">
-                <span>Romanos:</span>
-                <div class="container_input_saida">
-                    <div id="saida-romanos">
-                        
-                    </div>
-                    <i class="fa-regular fa-copy copy-romanos"></i>
-                </div>
-                <input type="button" id="btn-convert-to-romanos" value="Converter">
-            </div>
+        <div class="container_input" id="toDecimalContainer">
+          <label for="recebe-romanos">Romanos:</label>
+          <input
+            type="text"
+            name="recebe-romanos"
+            id="recebe-romanos"
+            placeholder="XXV"
+          />
+          <span>Decimais:</span>
+          <div class="container_input_saida">
+            <textarea id="saida-decimal" readonly> </textarea>
+            <i class="fa-regular fa-copy copy-decimais click-button"></i>
+          </div>
+          <input type="button" id="btn-convert-to-decimal" value="Converter" />
         </div>
+        <div class="container_input" id="toRomanosContainer">
+          <label for="recebe-decimais">Decimais:</label>
+          <input
+            type="text"
+            name="recebe-decimais"
+            id="recebe-decimais"
+            placeholder="125"
+          />
+          <span>Romanos:</span>
+          <div class="container_input_saida">
+            <textarea id="saida-romanos" readonly> </textarea>
+            <i class="fa-regular fa-copy copy-romanos click-button"></i>
+          </div>
+          <input
+            type="button"
+            id="btn-convert-to-romanos"
+            class="click-button"
+            value="Converter"
+          />
+        </div>
+      </div>
     </main>
-    
+
     <script src="src/script.js" type="module"></script>
-</body>
+  </body>
 </html>

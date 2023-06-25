@@ -1,3 +1,5 @@
+@import "variaveis/colors.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,44 +12,49 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #d2691e;
+  background-color: $background-color;
 }
 
 main {
-  height: 90%;
+  // height: 90%;
   width: 90%;
   max-width: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5dc;
   border-radius: 12px;
+  background-color: $main-background-color;
+  box-shadow: 1px 1px 5px $shadow-color;
 }
 
 .container_text {
   text-align: center;
   text-transform: uppercase;
   margin: 1.5rem 0;
+
+  h1 {
+    font-size: 1.5rem;
+    color: $black-color;
+  }
+
+  img {
+    margin-bottom: 5px;
+  }
 }
 
 .container {
   height: 100%;
   width: 95%;
   max-width: 350px;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 1rem;
   border-radius: 12px;
-  border: 1px solid #8080806e;
-  
-}
-
-h1 {
-  font-size: 1.5rem;
-  color: #333333;
+  border: 1px solid $border-container-color;
 }
 
 .container_buttons {
@@ -63,13 +70,13 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  background-color: #e18747e0;;
-  color: #f5f5f5;
+  background-color: $button-main-color;
+  color: $white-color;
   cursor: pointer;
 
   &:hover {
     transition: 0.4s;
-    background-color: #d2691e;
+    background-color: $button-hover-color;
   }
 }
 
@@ -84,7 +91,7 @@ button {
   span {
     width: 250px;
     font-weight: 600;
-    color: #333333;
+    color: $black-color;
   }
 }
 
@@ -95,12 +102,13 @@ input[type="text"] {
   padding: 0 5px;
   border-radius: 5px;
   outline: 0;
-  border: 1px solid #a9a9a9;
+  background-color: $main-background-color;
+  border: 1px solid $border-color;
 
-  &:placeholder {
+  &::placeholder {
     padding: 0 5px;
-    color: #333333;
-    opacity: 0.8;
+    color: $black-color;
+    opacity: 0.5;
   }
 }
 
@@ -109,28 +117,33 @@ input[type="text"] {
   height: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 6px;
   border-radius: 5px;
-  border: 1px solid #a9a9a9;
+  border: 1px solid $border-color;
 
-  div {
+  textarea {
     width: 90%;
     padding: 0 5px;
-    font-size: 16px;
+    height: 38px;
+    font-size: 17px;
     font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    resize: none;
+    outline: 0;
   }
 
   i {
-    position: relative;
-    color: #333333;
+    margin-right: 5px;
+    color: $black-color;
     cursor: pointer;
 
     &:hover {
       opacity: 0.8;
-    }
-
-    &:active {
-      bottom: 1px;
     }
   }
 }
@@ -142,13 +155,21 @@ input[type="button"] {
   background-color: transparent;
   font-weight: bold;
   border-radius: 5px;
-  border: 1px solid #d2691e;
-  color: #d2691e;
+  border: 1px solid $button-main-color;
+  color: $button-main-color;
   cursor: pointer;
 
   &:hover {
-    background-color: #d2691e;
-    color: #f5f5f5;
     transition: 0.4s;
+    color: $white-color;
+    background-color: $button-main-color;
+  }
+}
+
+.click-button {
+  position: relative;
+
+  &:active {
+    bottom: 0.5px;
   }
 }
