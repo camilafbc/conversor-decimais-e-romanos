@@ -78,6 +78,10 @@ button {
     transition: 0.4s;
     background-color: $button-hover-color;
   }
+
+  &:active, &:focus {
+    background-color: $button-hover-color;
+  }
 }
 
 .container_input {
